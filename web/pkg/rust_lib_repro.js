@@ -316,6 +316,22 @@ __exports.dart_fn_deliver_output = function(call_id, ptr_, rust_vec_len_, data_l
 };
 
 /**
+* @param {number} ptr
+*/
+__exports.rust_arc_increment_strong_count_RustOpaque_flutter_rust_bridgefor_generatedrust_asyncRwLockOpaqueData = function(ptr) {
+    _assertNum(ptr);
+    wasm.rust_arc_increment_strong_count_RustOpaque_flutter_rust_bridgefor_generatedrust_asyncRwLockOpaqueData(ptr);
+};
+
+/**
+* @param {number} ptr
+*/
+__exports.rust_arc_decrement_strong_count_RustOpaque_flutter_rust_bridgefor_generatedrust_asyncRwLockOpaqueData = function(ptr) {
+    _assertNum(ptr);
+    wasm.rust_arc_decrement_strong_count_RustOpaque_flutter_rust_bridgefor_generatedrust_asyncRwLockOpaqueData(ptr);
+};
+
+/**
 */
 __exports.wasm_start_callback = function() {
     wasm.wasm_start_callback();
@@ -765,12 +781,12 @@ function __wbg_get_imports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper400 = function() { return logError(function (arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 28, __wbg_adapter_30);
+    imports.wbg.__wbindgen_closure_wrapper817 = function() { return logError(function (arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 49, __wbg_adapter_30);
         return addHeapObject(ret);
     }, arguments) };
-    imports.wbg.__wbindgen_closure_wrapper1314 = function() { return logError(function (arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 73, __wbg_adapter_33);
+    imports.wbg.__wbindgen_closure_wrapper1789 = function() { return logError(function (arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 94, __wbg_adapter_33);
         return addHeapObject(ret);
     }, arguments) };
 

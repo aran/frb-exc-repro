@@ -8,3 +8,31 @@ import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart';
 
 String greet({required String name, dynamic hint}) =>
     RustLib.instance.api.greet(name: name, hint: hint);
+
+OpaqueData makeData({dynamic hint}) =>
+    RustLib.instance.api.makeData(hint: hint);
+
+Future<int> getData({required OpaqueData data, dynamic hint}) =>
+    RustLib.instance.api.getData(data: data, hint: hint);
+
+Future<void> mutateData({required OpaqueData data, dynamic hint}) =>
+    RustLib.instance.api.mutateData(data: data, hint: hint);
+
+// Rust type: RustOpaqueMoi<flutter_rust_bridge::for_generated::rust_async::RwLock<OpaqueData>>
+@sealed
+class OpaqueData extends RustOpaque {
+  OpaqueData.dcoDecode(List<dynamic> wire)
+      : super.dcoDecode(wire, _kStaticData);
+
+  OpaqueData.sseDecode(int ptr, int externalSizeOnNative)
+      : super.sseDecode(ptr, externalSizeOnNative, _kStaticData);
+
+  static final _kStaticData = RustArcStaticData(
+    rustArcIncrementStrongCount:
+        RustLib.instance.api.rust_arc_increment_strong_count_OpaqueData,
+    rustArcDecrementStrongCount:
+        RustLib.instance.api.rust_arc_decrement_strong_count_OpaqueData,
+    rustArcDecrementStrongCountPtr:
+        RustLib.instance.api.rust_arc_decrement_strong_count_OpaqueDataPtr,
+  );
+}
